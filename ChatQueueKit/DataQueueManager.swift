@@ -97,7 +97,11 @@ public class DataManager<T> {
 //            return mainData.getLastData()
 //        }
 //    }
-    
+
+    public func getMainDatas() -> [T] {
+        return mainData.getDatas()
+    }
+
     public func getMainData(at: Int) -> T? {
         return mainData.getData(at: at)
     }
@@ -108,5 +112,10 @@ public class DataManager<T> {
     
     public func filteredMainDatas(_ filter: (T) -> Bool) -> [T]? {
         return mainData.getFilteredDatas(filter)
+    }
+    
+    func replaceMainDatas(_ newDatas: [T]) {
+        mainData.clear()  // 既存のデータをクリア
+        newDatas.forEach { mainData.append($0) }  // 新しいデータを追加
     }
 }
