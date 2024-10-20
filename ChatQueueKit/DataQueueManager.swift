@@ -114,7 +114,7 @@ public class DataManager<T> {
         return mainData.getFilteredDatas(filter)
     }
     
-    func replaceMainDatas(_ newDatas: [T]) {
+    public func replaceMainDatas(_ newDatas: [T]) {
         mainData.clear()  // 既存のデータをクリア
         newDatas.forEach { mainData.append($0) }  // 新しいデータを追加
     }
