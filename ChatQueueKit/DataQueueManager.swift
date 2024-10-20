@@ -105,4 +105,8 @@ public class DataManager<T> {
     public func sortMainData(by comparator: (T, T) -> Bool) {
         mainData.sort(by: comparator)
     }
+    
+    public func filteredMainDatas(_ filter: (T) -> Bool) -> [T]? {
+        return mainData.getFilteredDatas(filter)
+    }
 }
