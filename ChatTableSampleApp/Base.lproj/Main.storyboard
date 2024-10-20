@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatTableSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWM-wO-gZ2">
+                                <rect key="frame" x="47" y="783" width="64" height="35"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                <connections>
+                                    <action selector="onTappedClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOD-AN-O6r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCQ-tK-MAU">
+                                <rect key="frame" x="283" y="783" width="55" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="onTappedAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0v-dB-HDZ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YHC-OY-QPH">
+                                <rect key="frame" x="0.0" y="59" width="393" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="jCX-ow-rFx">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jCX-ow-rFx" id="pJO-fc-5EF">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pmK-e3-Abp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cYG-c2-By9"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV3-F6-dou">
+                                <rect key="frame" x="142" y="783" width="109" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add in bulk"/>
+                                <connections>
+                                    <action selector="onTappedAddInBulkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2C-qw-eOv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pV3-F6-dou" firstAttribute="leading" secondItem="iWM-wO-gZ2" secondAttribute="trailing" constant="31" id="4yX-co-aps"/>
+                            <constraint firstItem="YHC-OY-QPH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="823-VY-Ac4"/>
+                            <constraint firstItem="xCQ-tK-MAU" firstAttribute="leading" secondItem="pV3-F6-dou" secondAttribute="trailing" constant="32" id="GrT-Da-V1z"/>
+                            <constraint firstItem="iWM-wO-gZ2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IZr-oQ-oN0"/>
+                            <constraint firstItem="YHC-OY-QPH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LGF-Oh-3DI"/>
+                            <constraint firstItem="pV3-F6-dou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q8v-tA-unD"/>
+                            <constraint firstItem="iWM-wO-gZ2" firstAttribute="top" secondItem="YHC-OY-QPH" secondAttribute="bottom" constant="8" symbolic="YES" id="TLc-6l-VNd"/>
+                            <constraint firstItem="xCQ-tK-MAU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gnZ-UG-lmb"/>
+                            <constraint firstItem="pV3-F6-dou" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iei-lc-3z5"/>
+                            <constraint firstItem="YHC-OY-QPH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zFe-sd-GLb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="xCQ-tK-MAU" id="2La-oJ-Mzh"/>
+                        <outlet property="addInBulkButton" destination="pV3-F6-dou" id="6RY-6T-Bh3"/>
+                        <outlet property="clearButton" destination="iWM-wO-gZ2" id="CdB-dU-boR"/>
+                        <outlet property="tableView" destination="YHC-OY-QPH" id="pEw-9T-FFE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

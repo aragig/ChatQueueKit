@@ -11,6 +11,19 @@
 		E504B2A12CC2660D004DB801 /* ChatQueueKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E504B2962CC2660C004DB801 /* ChatQueueKit.framework */; };
 		E504B2A62CC2660D004DB801 /* ChatQueueKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2A52CC2660D004DB801 /* ChatQueueKitTests.swift */; };
 		E504B2A72CC2660D004DB801 /* ChatQueueKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E504B2992CC2660C004DB801 /* ChatQueueKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E504B2B12CC2662C004DB801 /* CoreDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2B02CC2662C004DB801 /* CoreDatas.swift */; };
+		E504B2B32CC26676004DB801 /* ChatQueueKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E504B2B22CC26676004DB801 /* ChatQueueKit.podspec */; };
+		E504B2B52CC26B04004DB801 /* CoreDatasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2B42CC26B04004DB801 /* CoreDatasTests.swift */; };
+		E504B2B72CC27280004DB801 /* DataQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2B62CC27280004DB801 /* DataQueueManager.swift */; };
+		E5300C912CC323D200DEE1C6 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5300C902CC323D200DEE1C6 /* DataManagerTests.swift */; };
+		E5300C992CC3356600DEE1C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5300C982CC3356600DEE1C6 /* AppDelegate.swift */; };
+		E5300C9B2CC3356600DEE1C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5300C9A2CC3356600DEE1C6 /* SceneDelegate.swift */; };
+		E5300C9D2CC3356600DEE1C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5300C9C2CC3356600DEE1C6 /* ViewController.swift */; };
+		E5300CA02CC3356600DEE1C6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E5300C9F2CC3356600DEE1C6 /* Base */; };
+		E5300CA22CC3356700DEE1C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5300CA12CC3356700DEE1C6 /* Assets.xcassets */; };
+		E5300CA52CC3356700DEE1C6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E5300CA42CC3356700DEE1C6 /* Base */; };
+		E54B57AC2CC47D9800102285 /* DataQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2B62CC27280004DB801 /* DataQueueManager.swift */; };
+		E54B57AD2CC47F6000102285 /* CoreDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2B02CC2662C004DB801 /* CoreDatas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +42,19 @@
 		E504B29A2CC2660C004DB801 /* ChatQueueKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ChatQueueKit.docc; sourceTree = "<group>"; };
 		E504B2A02CC2660D004DB801 /* ChatQueueKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatQueueKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E504B2A52CC2660D004DB801 /* ChatQueueKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQueueKitTests.swift; sourceTree = "<group>"; };
+		E504B2B02CC2662C004DB801 /* CoreDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatas.swift; sourceTree = "<group>"; };
+		E504B2B22CC26676004DB801 /* ChatQueueKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChatQueueKit.podspec; sourceTree = "<group>"; };
+		E504B2B42CC26B04004DB801 /* CoreDatasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatasTests.swift; sourceTree = "<group>"; };
+		E504B2B62CC27280004DB801 /* DataQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataQueueManager.swift; sourceTree = "<group>"; };
+		E5300C902CC323D200DEE1C6 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		E5300C962CC3356600DEE1C6 /* ChatTableSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatTableSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5300C982CC3356600DEE1C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E5300C9A2CC3356600DEE1C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E5300C9C2CC3356600DEE1C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5300C9F2CC3356600DEE1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5300CA12CC3356700DEE1C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5300CA42CC3356700DEE1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E5300CA62CC3356700DEE1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,14 +73,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5300C932CC3356600DEE1C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E504B28C2CC2660C004DB801 = {
 			isa = PBXGroup;
 			children = (
+				E504B2B22CC26676004DB801 /* ChatQueueKit.podspec */,
 				E504B2982CC2660C004DB801 /* ChatQueueKit */,
 				E504B2A42CC2660D004DB801 /* ChatQueueKitTests */,
+				E5300C972CC3356600DEE1C6 /* ChatTableSampleApp */,
 				E504B2972CC2660C004DB801 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +99,7 @@
 			children = (
 				E504B2962CC2660C004DB801 /* ChatQueueKit.framework */,
 				E504B2A02CC2660D004DB801 /* ChatQueueKitTests.xctest */,
+				E5300C962CC3356600DEE1C6 /* ChatTableSampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +109,8 @@
 			children = (
 				E504B2992CC2660C004DB801 /* ChatQueueKit.h */,
 				E504B29A2CC2660C004DB801 /* ChatQueueKit.docc */,
+				E504B2B02CC2662C004DB801 /* CoreDatas.swift */,
+				E504B2B62CC27280004DB801 /* DataQueueManager.swift */,
 			);
 			path = ChatQueueKit;
 			sourceTree = "<group>";
@@ -81,8 +119,24 @@
 			isa = PBXGroup;
 			children = (
 				E504B2A52CC2660D004DB801 /* ChatQueueKitTests.swift */,
+				E504B2B42CC26B04004DB801 /* CoreDatasTests.swift */,
+				E5300C902CC323D200DEE1C6 /* DataManagerTests.swift */,
 			);
 			path = ChatQueueKitTests;
+			sourceTree = "<group>";
+		};
+		E5300C972CC3356600DEE1C6 /* ChatTableSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				E5300C982CC3356600DEE1C6 /* AppDelegate.swift */,
+				E5300C9A2CC3356600DEE1C6 /* SceneDelegate.swift */,
+				E5300C9C2CC3356600DEE1C6 /* ViewController.swift */,
+				E5300C9E2CC3356600DEE1C6 /* Main.storyboard */,
+				E5300CA12CC3356700DEE1C6 /* Assets.xcassets */,
+				E5300CA32CC3356700DEE1C6 /* LaunchScreen.storyboard */,
+				E5300CA62CC3356700DEE1C6 /* Info.plist */,
+			);
+			path = ChatTableSampleApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +189,23 @@
 			productReference = E504B2A02CC2660D004DB801 /* ChatQueueKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E5300C952CC3356600DEE1C6 /* ChatTableSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5300CA72CC3356700DEE1C6 /* Build configuration list for PBXNativeTarget "ChatTableSampleApp" */;
+			buildPhases = (
+				E5300C922CC3356600DEE1C6 /* Sources */,
+				E5300C932CC3356600DEE1C6 /* Frameworks */,
+				E5300C942CC3356600DEE1C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatTableSampleApp;
+			productName = ChatTableSampleApp;
+			productReference = E5300C962CC3356600DEE1C6 /* ChatTableSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +220,9 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					E504B29F2CC2660D004DB801 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					E5300C952CC3356600DEE1C6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -168,6 +242,7 @@
 			targets = (
 				E504B2952CC2660C004DB801 /* ChatQueueKit */,
 				E504B29F2CC2660D004DB801 /* ChatQueueKitTests */,
+				E5300C952CC3356600DEE1C6 /* ChatTableSampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E504B2B32CC26676004DB801 /* ChatQueueKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +260,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5300C942CC3356600DEE1C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5300CA22CC3356700DEE1C6 /* Assets.xcassets in Resources */,
+				E5300CA52CC3356700DEE1C6 /* Base in Resources */,
+				E5300CA02CC3356600DEE1C6 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E504B29B2CC2660C004DB801 /* ChatQueueKit.docc in Sources */,
+				E504B2B72CC27280004DB801 /* DataQueueManager.swift in Sources */,
+				E504B2B12CC2662C004DB801 /* CoreDatas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +290,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E504B2B52CC26B04004DB801 /* CoreDatasTests.swift in Sources */,
+				E5300C912CC323D200DEE1C6 /* DataManagerTests.swift in Sources */,
 				E504B2A62CC2660D004DB801 /* ChatQueueKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5300C922CC3356600DEE1C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5300C9D2CC3356600DEE1C6 /* ViewController.swift in Sources */,
+				E5300C992CC3356600DEE1C6 /* AppDelegate.swift in Sources */,
+				E54B57AD2CC47F6000102285 /* CoreDatas.swift in Sources */,
+				E5300C9B2CC3356600DEE1C6 /* SceneDelegate.swift in Sources */,
+				E54B57AC2CC47D9800102285 /* DataQueueManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +317,25 @@
 			targetProxy = E504B2A22CC2660D004DB801 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E5300C9E2CC3356600DEE1C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5300C9F2CC3356600DEE1C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5300CA32CC3356700DEE1C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5300CA42CC3356700DEE1C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E504B2A82CC2660D004DB801 /* Debug */ = {
@@ -411,6 +532,7 @@
 		E504B2AE2CC2660D004DB801 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TNNPKNN4HZ;
@@ -427,6 +549,7 @@
 		E504B2AF2CC2660D004DB801 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TNNPKNN4HZ;
@@ -435,6 +558,62 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.apppppp.ChatQueueKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E5300CA82CC3356700DEE1C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TNNPKNN4HZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatTableSampleApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apppppp.ChatTableSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5300CA92CC3356700DEE1C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TNNPKNN4HZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatTableSampleApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apppppp.ChatTableSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -466,6 +645,15 @@
 			buildConfigurations = (
 				E504B2AE2CC2660D004DB801 /* Debug */,
 				E504B2AF2CC2660D004DB801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5300CA72CC3356700DEE1C6 /* Build configuration list for PBXNativeTarget "ChatTableSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5300CA82CC3356700DEE1C6 /* Debug */,
+				E5300CA92CC3356700DEE1C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
