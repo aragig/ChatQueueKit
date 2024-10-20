@@ -12,6 +12,15 @@ class CoreDatas<T> {
 
     fileprivate var _data: [T] = []
     
+    // Subscriptを追加して、インデックスでアクセス可能にする
+    subscript(index: Int) -> T {
+        get {
+            return _data[index]
+        }
+        set(newValue) {
+            _data[index] = newValue
+        }
+    }
     
     func count() -> Int {
         return _data.count

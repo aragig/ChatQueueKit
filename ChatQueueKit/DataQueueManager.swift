@@ -118,4 +118,8 @@ public class DataManager<T> {
         mainData.clear()  // 既存のデータをクリア
         newDatas.forEach { mainData.append($0) }  // 新しいデータを追加
     }
+    
+    public func replaceMainData(_ at: Int, newData: T) {
+        mainData[at] = newData
+    }
 }
