@@ -7,15 +7,15 @@
 
 import Foundation
 
-protocol DataManagerDelegate: AnyObject {
+public protocol DataManagerDelegate: AnyObject {
     func doReloadTable<T>(isQueueFull: Bool, movedData: [T])
 }
 
-class DataManager<T> {
+public class DataManager<T> {
     private var mainData = CoreDatas<T>()
     private var queueData = CoreDatas<T>()
     
-    weak var delegate: DataManagerDelegate?
+    public weak var delegate: DataManagerDelegate?
     
     private var timer: Timer?
     private let queueThreshold: Int
@@ -24,7 +24,7 @@ class DataManager<T> {
 
     //キューがたとえば 50 を超えたら、一気にdataへ移す
     //キューがたとえば 50 を超えたら、delegate で通知する
-    init(queueThreshold: Int = 50, reloadTableTimeInterval: TimeInterval = 1.0, insertAtTop: Bool = false) {
+    public init(queueThreshold: Int = 50, reloadTableTimeInterval: TimeInterval = 1.0, insertAtTop: Bool = false) {
         self.queueThreshold = queueThreshold
         self.reloadTableTimeInterval = reloadTableTimeInterval
         self.insertAtTop = insertAtTop
@@ -34,12 +34,12 @@ class DataManager<T> {
         stopQueueProcessing()
     }
     
-    func append(_ data: T) {
+    public func append(_ data: T) {
         queueData.append(data)
         checkQueueLimit()
     }
     
-    func count() -> Int {
+    public func count() -> Int {
         return mainData.count()
     }
     
@@ -65,7 +65,7 @@ class DataManager<T> {
     }
 
     // 定期的にキューを処理するためのタイマー開始
-    func startQueueProcessing() {
+    public func startQueueProcessing() {
         timer = Timer.scheduledTimer(withTimeInterval: reloadTableTimeInterval, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             self.moveQueueToMain(isQueueFull: false)
@@ -73,7 +73,7 @@ class DataManager<T> {
     }
     
     // タイマー停止
-    func stopQueueProcessing() {
+    public func stopQueueProcessing() {
         timer?.invalidate()
         timer = nil
     }
@@ -85,7 +85,7 @@ class DataManager<T> {
         }
     }
     
-    func clearMainAndQueueData() {
+    public func clearMainAndQueueData() {
         queueData.clear()
         mainData.clear()
     }
@@ -98,11 +98,11 @@ class DataManager<T> {
 //        }
 //    }
     
-    func getMainData(at: Int) -> T? {
+    public func getMainData(at: Int) -> T? {
         return mainData.getData(at: at)
     }
     
-    func sortMainData(by comparator: (T, T) -> Bool) {
+    public func sortMainData(by comparator: (T, T) -> Bool) {
         mainData.sort(by: comparator)
     }
 }
