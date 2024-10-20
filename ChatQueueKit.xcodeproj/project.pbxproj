@@ -25,6 +25,7 @@
 		E54B57AC2CC47D9800102285 /* DataQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2B62CC27280004DB801 /* DataQueueManager.swift */; };
 		E54B57AD2CC47F6000102285 /* CoreDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504B2B02CC2662C004DB801 /* CoreDatas.swift */; };
 		E54B57AF2CC489F200102285 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E54B57AE2CC489F200102285 /* README.md */; };
+		E54B57B12CC48C2300102285 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E54B57B02CC48C2300102285 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E5300CA42CC3356700DEE1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5300CA62CC3356700DEE1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54B57AE2CC489F200102285 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E54B57B02CC48C2300102285 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				E54B57AE2CC489F200102285 /* README.md */,
+				E54B57B02CC48C2300102285 /* LICENSE */,
 				E504B2B22CC26676004DB801 /* ChatQueueKit.podspec */,
 				E504B2982CC2660C004DB801 /* ChatQueueKit */,
 				E504B2A42CC2660D004DB801 /* ChatQueueKitTests */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54B57B12CC48C2300102285 /* LICENSE in Resources */,
 				E54B57AF2CC489F200102285 /* README.md in Resources */,
 				E504B2B32CC26676004DB801 /* ChatQueueKit.podspec in Resources */,
 			);
