@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         triggerVibration()
         lastNo = 0
         chatData.stopQueueProcessing()
-        chatData.clearMainAndQueueData()
+        chatData.cleaDatas(selects: [.QueueData, .MainData])
         tableView.reloadData()
     }
 
@@ -96,7 +96,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let data = chatData.getMainData(at: indexPath.row)
+        let data = chatData.getData(select: .MainData, at: indexPath.row)
         if data != nil {
             cell.textLabel?.text = "No: \(data!.no), Content: \(data!.content)"
         }
@@ -130,7 +130,7 @@ extension ViewController: DataManagerDelegate {
         if isQueueFull {
             // 実際はもっと良い方法で実装すること
             let ascending = false
-            chatData.sortMainData { ascending ? $0.no < $1.no : $0.no > $1.no }
+            chatData.sortData(select:.MainData) { ascending ? $0.no < $1.no : $0.no > $1.no }
             self.tableView.reloadData()
         }
 

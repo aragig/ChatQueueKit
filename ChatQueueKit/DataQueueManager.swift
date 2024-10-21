@@ -12,6 +12,12 @@ public protocol DataManagerDelegate: AnyObject {
 }
 
 public class DataManager<T> {
+    
+    public enum DataContainerType {
+        case QueueData
+        case MainData
+    }
+    
     private var mainData = CoreDatas<T>()
     private var queueData = CoreDatas<T>()
     
@@ -85,41 +91,85 @@ public class DataManager<T> {
         }
     }
     
-    public func clearMainAndQueueData() {
-        queueData.clear()
-        mainData.clear()
+    public func cleaDatas(selects:[DataContainerType]) {
+        for dataType in selects {
+            switch dataType {
+            case .QueueData:
+                queueData.clear()
+                break
+            case .MainData:
+                mainData.clear()
+                break
+            }
+        }
+        
+        
     }
     
-//    func getLastMainData() -> T? {
-//        if insertAtTop {
-//            return mainData.getData(at:0)
-//        } else {
-//            return mainData.getLastData()
-//        }
-//    }
 
-    public func getMainDatas() -> [T] {
-        return mainData.getDatas()
+    public func getDatas(select:DataContainerType) -> [T] {
+        switch select {
+        case .QueueData:
+            return queueData.getDatas()
+        case .MainData:
+            return mainData.getDatas()
+        }
     }
 
-    public func getMainData(at: Int) -> T? {
-        return mainData.getData(at: at)
+    public func getData(select:DataContainerType, at: Int) -> T? {
+        switch select {
+        case .QueueData:
+            return queueData.getData(at: at)
+        case .MainData:
+            return mainData.getData(at: at)
+        }
+    }
+
+    
+    public func sortData(select:DataContainerType, by comparator: (T, T) -> Bool) {
+        switch select {
+        case .QueueData:
+            queueData.sort(by: comparator)
+            break
+        case .MainData:
+            mainData.sort(by: comparator)
+            break
+        }
     }
     
-    public func sortMainData(by comparator: (T, T) -> Bool) {
-        mainData.sort(by: comparator)
+    public func filteredDatas(select:DataContainerType, filter: (T) -> Bool) -> [T]? {
+        
+        switch select {
+        case .QueueData:
+            return queueData.getFilteredDatas(filter)
+        case .MainData:
+            return mainData.getFilteredDatas(filter)
+        }
     }
     
-    public func filteredMainDatas(_ filter: (T) -> Bool) -> [T]? {
-        return mainData.getFilteredDatas(filter)
+    public func replaceDatas(select:DataContainerType, newDatas: [T]) {
+        switch select {
+        case .QueueData:
+            queueData.clear()
+            newDatas.forEach { queueData.append($0) }
+            break
+        case .MainData:
+            mainData.clear()  // 既存のデータをクリア
+            newDatas.forEach { mainData.append($0) }  // 新しいデータを追加
+            break
+        }
+
     }
     
-    public func replaceMainDatas(_ newDatas: [T]) {
-        mainData.clear()  // 既存のデータをクリア
-        newDatas.forEach { mainData.append($0) }  // 新しいデータを追加
-    }
-    
-    public func replaceMainData(at: Int, newData: T) {
-        mainData[at] = newData
+    public func replaceData(select:DataContainerType, at: Int, newData: T) {
+        switch select {
+        case .QueueData:
+            queueData[at] = newData
+            break
+        case .MainData:
+            mainData[at] = newData
+            break
+        }
+
     }
 }
