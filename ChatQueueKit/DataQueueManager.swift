@@ -72,9 +72,11 @@ public class DataManager<T> {
 
     // 定期的にキューを処理するためのタイマー開始
     public func startQueueProcessing() {
-        timer = Timer.scheduledTimer(withTimeInterval: reloadTableTimeInterval, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            self.moveQueueToMain(isQueueFull: false)
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: reloadTableTimeInterval, repeats: true) { [weak self] _ in
+                guard let self = self else { return }
+                self.moveQueueToMain(isQueueFull: false)
+            }
         }
     }
     
