@@ -76,7 +76,7 @@ extension ViewController: DataManagerDelegate {
 
 データがキューからメインデータに移行されたタイミングで、テーブルのリロードを行うためにデリゲートメソッドを活用できます。
 
-```
+```swift
 func doReloadTable<T>(isQueueFull: Bool, movedData: [T]) {
     self.tableView.reloadData()
 }
