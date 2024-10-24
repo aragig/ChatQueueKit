@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
 
 //    var chatData: [Comment] = []
-    var chatData = DataManager<Comment>(queueThreshold: 5, reloadTableTimeInterval: 1.0, insertAtTop: true)
+    var chatData = DataManager<Comment>(queueThreshold: 10, reloadTableTimeInterval: 1.0, insertAtTop: true)
     
     var lastNo = 0
 
@@ -71,6 +71,10 @@ class ViewController: UIViewController {
             startNo = startNo + 1
             comments.append(Comment(no: startNo, content: "Bulk message \(startNo)"))
         }
+//        for _ in startNo..<startNo+5 {
+//            startNo = startNo + 1
+//            comments.append(Comment(no: startNo, content: "Bulk message \(startNo)"))
+//        }
         lastNo = startNo
 
         // コメントをランダムに並べ替え
@@ -79,6 +83,7 @@ class ViewController: UIViewController {
         // ランダムに並べ替えたコメントを追加
         for comment in comments {
             chatData.append(comment)
+            print("ランダムに並べ替えたコメントを追加")
         }
     }
 
@@ -111,27 +116,26 @@ extension ViewController: UITableViewDelegate {
 }
 
 extension ViewController: DataManagerDelegate {
-    func doReloadTable<T>(isQueueFull: Bool, movedData: [T]) {
-        let indexPaths = movedData.enumerated().map { IndexPath(row: $0.offset, section: 0) }
-// 参考のために以下処理を残す
-//        var indexPaths:[IndexPath] = []
-//        var i = 0
-//        
-//        for c in movedData {
-//            let indexPath = IndexPath(row: i, section: 0)
-//            indexPaths.append(indexPath)
-//            i = i + 1
-//        }
-
-        self.tableView.beginUpdates()
-        self.tableView.insertRows(at: indexPaths, with: .top)
-        self.tableView.endUpdates()
+    
+    func begingMoveQueueToMain(isQueueFull: Bool) {
+        print("begingMoveQueueToMainが呼ばれた")
+        let ascending = true
+        print("ソートを実行する")
+        self.chatData.sortData(select:.QueueData) { ascending ? $0.no < $1.no : $0.no > $1.no }
+    }
+    
+    
+    func afterMoveQueueToMain<T>(isQueueFull: Bool, movedData: [T]) {
+        print("afterMoveQueueToMainが呼ばれた")
         
         if isQueueFull {
             // 実際はもっと良い方法で実装すること
-            let ascending = false
-            chatData.sortData(select:.MainData) { ascending ? $0.no < $1.no : $0.no > $1.no }
             self.tableView.reloadData()
+        } else {
+            let indexPaths = movedData.enumerated().map { IndexPath(row: $0.offset, section: 0) }
+            self.tableView.beginUpdates()
+            self.tableView.insertRows(at: indexPaths, with: .top)
+            self.tableView.endUpdates()
         }
 
     }

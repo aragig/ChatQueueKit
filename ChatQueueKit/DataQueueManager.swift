@@ -8,7 +8,8 @@
 import Foundation
 
 public protocol DataManagerDelegate: AnyObject {
-    func doReloadTable<T>(isQueueFull: Bool, movedData: [T])
+    func begingMoveQueueToMain(isQueueFull: Bool)
+    func afterMoveQueueToMain<T>(isQueueFull: Bool, movedData: [T])
 }
 
 public class DataManager<T> {
@@ -51,6 +52,9 @@ public class DataManager<T> {
     
     // キューからメインデータへ移行
     private func moveQueueToMain(isQueueFull: Bool) {
+        
+        delegate?.begingMoveQueueToMain(isQueueFull: isQueueFull);
+
         let allQueueData = queueData.getDatas()
         
         // キューにデータがない場合、デリゲートを呼び出さない
@@ -67,7 +71,8 @@ public class DataManager<T> {
         queueData.clear()
         
         // デリゲート通知 (移動されたデータを渡す)
-        delegate?.doReloadTable(isQueueFull: isQueueFull, movedData: allQueueData)
+        delegate?.afterMoveQueueToMain(isQueueFull: isQueueFull, movedData: allQueueData);
+//        delegate?.doReloadTable(isQueueFull: isQueueFull, movedData: allQueueData)
     }
 
     // 定期的にキューを処理するためのタイマー開始
@@ -129,6 +134,7 @@ public class DataManager<T> {
 
     
     public func sortData(select:DataContainerType, by comparator: (T, T) -> Bool) {
+//        print("sortDataが呼ばれた")
         switch select {
         case .QueueData:
             queueData.sort(by: comparator)
@@ -137,6 +143,7 @@ public class DataManager<T> {
             mainData.sort(by: comparator)
             break
         }
+
     }
     
     public func filteredDatas(select:DataContainerType, filter: (T) -> Bool) -> [T]? {
