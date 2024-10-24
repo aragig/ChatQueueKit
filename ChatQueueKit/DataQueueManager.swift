@@ -46,10 +46,16 @@ public class DataManager<T> {
         checkQueueLimit()
     }
     
-    public func count() -> Int {
-        return mainData.count()
+
+    public func count(select:DataContainerType) -> Int {
+        switch select {
+        case .QueueData:
+            return queueData.count()
+        case .MainData:
+            return mainData.count()
+        }
     }
-    
+
     // キューからメインデータへ移行
     private func moveQueueToMain(isQueueFull: Bool) {
         
